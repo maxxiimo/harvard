@@ -5,9 +5,6 @@ class PagesController < ApplicationController
   def about
   end
 
-  def site_map
-  end
-
   def terms
   end
 

@@ -2,10 +2,9 @@ Harvard::Application.routes.draw do
   root :to => 'pages#home'
 
   match 'home'      => 'pages#home'
-  match 'work'      => 'pages#work'
-  match 'team'      => 'pages#team'
-  match 'thoughts'  => 'pages#thoughts'
-  match 'labs'      => 'pages#labs'
+  match 'about'     => 'pages#about'
+  match 'terms'     => 'pages#terms'
+  match 'privacy'   => 'pages#privacy'
   match 'contact'   => 'pages#contact'
 
   # The priority is based upon order of creation:
