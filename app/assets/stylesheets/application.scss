@@ -2,6 +2,17 @@
   ============================================================================ */
 @import "define";
 
+// Susy Grid
+
+$total-columns:     4;
+$column-width:      4em;
+$gutter-width:      1em;
+$grid-padding:      $gutter-width;
+
+$break6:            6;
+$break9:            9;
+$break12:           12;
+
 
 /* MIXINS
   ============================================================================ */
@@ -22,6 +33,7 @@ ol, ul {
 
 /* BASIC STRUCTURE
   ============================================================================ */
+@import "susy";
 @import "desktop/layout";
 
 
