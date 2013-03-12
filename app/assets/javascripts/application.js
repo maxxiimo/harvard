@@ -11,5 +11,3 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require modernizr-2.6.2.min
-//= require jquery-1.8.3.min
-//= require site
