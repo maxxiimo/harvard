@@ -31,6 +31,10 @@ body
   // +at-breakpoint($break12)
     // +susy-grid-background
 
++with-grid-settings(12,4em,1em,1em)
+  .new-grid
+    +container
+
 img
   vertical-align: middle
 
@@ -42,10 +46,18 @@ img
 
 header
   height: 2em
+
+.header-bg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 2em
   // margin-bottom: 1em
   // padding: .625em 0 0
   background-color: $bg-header
   opacity: .75
+  z-index: -1000
 
 .logo
   float: left
