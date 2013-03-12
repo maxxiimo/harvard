@@ -17,6 +17,7 @@ $break12:           12;
 /* MIXINS
   ============================================================================ */
 @import "compass";
+@import "compass/layout/sticky-footer";
 @import "media_queries";
 @import "mixins";
 
@@ -25,8 +26,10 @@ $break12:           12;
   ============================================================================ */
 @import "boilerplate/h5bp_normalize_v102";
 
-// To counter normalize indentation of lists.
+// Margin to counter sticky footer issues caused by _h5bp_normalize_v102.scss line 284.
+// Padding to counter indentation of lists by _h5bp_normalize_v102.scss line 288.
 ol, ul {
+  margin: 0;
   padding-left: 0;
 }
 

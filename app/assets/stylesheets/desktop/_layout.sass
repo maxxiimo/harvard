@@ -1,13 +1,16 @@
 /*  Base
   -----------------------
 
+*
+  margin: 0
+
 html, button, input, select, textarea
   font-family: $base-font-family
   color: $base-font-color
 
 html
   /* This may cause problems in Firefox when combined with JS plugins (like modals or drag-and-drop UIs) that rely on viewport dimension calculations
-  overflow-y: scroll
+  // overflow-y: scroll
   -webkit-font-smoothing: antialiased
 
 body
@@ -19,14 +22,14 @@ body
   +container($total-columns, $break6, $break9, $break12)
   // +susy-grid-background
 
-  +at-breakpoint($break6)
+  // +at-breakpoint($break6)
     // +susy-grid-background
 
-  +at-breakpoint($break9)
+  // +at-breakpoint($break9)
     // +susy-grid-background
 
-  +at-breakpoint($break12)
-    +susy-grid-background
+  // +at-breakpoint($break12)
+    // +susy-grid-background
 
 img
   vertical-align: middle
@@ -39,9 +42,10 @@ img
 
 header
   height: 2em
-  margin-bottom: 1em
-  padding: .625em 0 0
-  // background-color: $bg-header
+  // margin-bottom: 1em
+  // padding: .625em 0 0
+  background-color: $bg-header
+  opacity: .75
 
 .logo
   float: left
@@ -51,14 +55,16 @@ header
   -----------------------
 
 footer
-  margin-top: 1em
-  padding: 0 0 .625em
+  // margin-top: 1em
+  // padding: 0 0 .625em
+  background-color: $bg-footer
+  opacity: .75
   ul
-    margin-bottom: .3125em
+    // margin-bottom: .3125em
     li
       display: inline-block
-      padding: 0 .625em
-      // font-size: 85%
+      // padding: 0 .625em
+      // font-size: .85em
     li:first-child
       padding-left: 0
   p
