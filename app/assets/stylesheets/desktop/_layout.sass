@@ -1,9 +1,6 @@
 /*  Base
   -----------------------
 
-*
-  margin: 0
-
 html, button, input, select, textarea
   font-family: $base-font-family
   color: $base-font-color
@@ -20,6 +17,7 @@ body
 
 .container
   +container($total-columns, $break6, $break9, $break12)
+  position: relative
 
   +at-breakpoint($break6)
     // +susy-grid-background
@@ -49,17 +47,20 @@ header
 .header-bg
   position: absolute
   top: 0
-  left: 0
-  width: 100%
+  left: -1000px
+  width: 1000%
   height: 2em
-  // margin-bottom: 1em
-  // padding: .625em 0 0
   background-color: $bg-header
   opacity: .75
   z-index: -1000
 
 .logo
   float: left
+  margin: 0
+  font-family: $leckerli
+  font-size: 1.5em
+  a
+    +link-colors($blackish, $blackish, $blackish, $blackish, $blackish)
 
 
 /*  Footer
