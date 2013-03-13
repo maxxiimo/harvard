@@ -18,6 +18,7 @@ $break12:           12;
   ============================================================================ */
 @import "compass";
 @import "compass/layout/sticky-footer";
+@import "susy";
 @import "media_queries";
 @import "mixins";
 
@@ -36,7 +37,6 @@ ol, ul {
 
 /* BASIC STRUCTURE
   ============================================================================ */
-@import "susy";
 @import "desktop/layout";
 
 
