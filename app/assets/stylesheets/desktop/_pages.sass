@@ -2,17 +2,24 @@
   -----------------------
 
 .home-box
-  // +span-columns(12 omega, 12)
+  +span-columns(4 omega, 4)
   position: absolute
-  bottom: 65px
+  bottom: 115px
   right: 0
-  // margin-left: 15%
+  text-align: center
 
   +at-breakpoint($break6)
-
+    +span-columns(6 omega, 6)
 
   +at-breakpoint($break9)
-
+    +span-columns(9 omega, 9)
+    bottom: 65px
 
   +at-breakpoint($break12)
+    +span-columns(12 omega, 12)
 
+  .blue-button
+    margin-bottom: 10px
+
+    +at-breakpoint($break9)
+      margin-bottom: 0

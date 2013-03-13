@@ -12,7 +12,25 @@ textarea
   -----------------------
 
 .blue-button
-  +fancy-button($blue-button,$button-size)
+  +fancy-button($blue-button, $button-size)
+
+  +at-breakpoint($break6)
+    +fancy-button($blue-button, $button-size-6)
+
+  +at-breakpoint($break9)
+    +fancy-button($blue-button, $button-size-9)
+
+  +at-breakpoint($break12)
+    +fancy-button($blue-button, $button-size-12)
 
 .green-button
-  +fancy-button($green-button,$button-size)
+  +fancy-button($green-button, $button-size)
+
+  +at-breakpoint($break6)
+    +fancy-button($green-button, $button-size-6)
+
+  +at-breakpoint($break9)
+    +fancy-button($green-button, $button-size-9)
+
+  +at-breakpoint($break12)
+    +fancy-button($green-button, $button-size-12)
