@@ -1,6 +1,6 @@
 %head
   %meta{:charset => "utf-8"}
-  %link{:rel => "dns-prefetch", :href => "//ajax.googleapis.com"}
+  %link{:rel => "dns-prefetch", :href => "//fonts.googleapis.com"}
   %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
   %title= content_for?(:title) ? ("A Thousand Words - " + yield(:title)) : "A Thousand Words"
   %meta{:name => "description", :content => "The best Instagram photos for purchase."}
@@ -12,4 +12,7 @@
   = stylesheet_link_tag "application"
   -# for production customize modernizr at: http://www.modernizr.com/download/
   = javascript_include_tag "application"
+
+  %link{:href => "http://fonts.googleapis.com/css?family=Leckerli+One", :rel => "stylesheet", :type => "text/css"}
+
   = csrf_meta_tag

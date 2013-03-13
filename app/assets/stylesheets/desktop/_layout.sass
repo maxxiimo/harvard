@@ -20,15 +20,14 @@ body
 
 .container
   +container($total-columns, $break6, $break9, $break12)
-  // +susy-grid-background
 
-  // +at-breakpoint($break6)
+  +at-breakpoint($break6)
     // +susy-grid-background
 
-  // +at-breakpoint($break9)
+  +at-breakpoint($break9)
     // +susy-grid-background
 
-  // +at-breakpoint($break12)
+  +at-breakpoint($break12)
     // +susy-grid-background
 
 +with-grid-settings(12,4em,1em,1em)
@@ -72,16 +71,25 @@ footer
   background-color: $bg-footer
   opacity: .75
   ul
-    // margin-bottom: .3125em
+    +span-columns(4, 12)
+    margin-top: .25em
     li
       display: inline-block
-      // padding: 0 .625em
-      // font-size: .85em
+      padding: 0 .4em
+      font-size: .85em
+      // border-left: 1px solid $blackish
     li:first-child
       padding-left: 0
-  p
+      // border: none
+  p, h2
     margin: 0
+  .slogan
+    +span-columns(8 omega, 12)
+    margin-top: .3em
+    font-family: $leckerli
+    text-align: right
+    color: $blackish
+  .copyright
+    +span-columns(4, 12)
     font-size: .75em
     color: $font-gray
-  .slogan
-    float: right
