@@ -21,6 +21,7 @@ group :assets do
   gem 'compass-rails'
   gem 'oily_png'
   gem 'susy'
+  gem 'fancy-buttons'
 end
 
 # See https://github.com/ndbroadbent/turbo-sprockets-rails3

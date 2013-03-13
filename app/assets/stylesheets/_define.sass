@@ -47,33 +47,47 @@ $base-nav-font:     $georgia      !default
 
 $sticky-height:     3em
 
+// form definitions...
+
+$button-size:       2.5em
+
 
 /*  Colors
   -----------------------
 
+// color palette...
+
+/* https://kuler.adobe.com/#themeID/2291686
+
+$blackish:          #3e454c
+$dark-bluish:       #2185c5
+$light-bluish:      #7ecefd
+$tanish:            #fff6e5
+$orangish:          #ff7f66
+
+// buttons...
+
+$blue-button:       darken($dark-bluish, 10)
+$green-button:      adjust-hue($blue-button, -120)
+
 // background...
 
-$bg-body:           #fcfcfc
-$bg-header:         #fff
-$bg-footer:         #fff
+$bg-body:           $tanish
+$bg-header:         $tanish
+$bg-footer:         $tanish
 
 // fonts...
 
-$font-white:        #fff
+$font-white:        #fcfcfc
 $font-gray:         #999
-// $font-tabs:
-// $font-footer:
-// $font-h1:
-// $font-h2:
-// $font-h3:
 
 // links...
 
-$link-normal:       #0645ad
-$link-hover:        #3366bb
-$link-active:       #669934
-$link-visited:      #7f007f
-$link-focus:        #669934
+$link-normal:       darken($dark-bluish, 10)
+$link-hover:        lighten($dark-bluish, 10)
+$link-active:       darken($dark-bluish, 10)
+$link-visited:      darken($dark-bluish, 10)
+$link-focus:        darken($dark-bluish, 10)
 
 // miscellaneous...
 
@@ -93,11 +107,5 @@ $warning-drk:       #cc682a
 $error-lgt:         #f9eae5
 $error-drk:         #cf3303
 
-// lgt-blu
-// drk-blu
-// lgt-grn
-// drk-grn
-// lgt-yo
-// drk-oj
-// lgt-red
-// drk-red
+// KEY: 1. lgt-blu, 2. drk-blu, 3. lgt-grn, 4. drk-grn,
+//      5. lgt-ylo, 6. drk-orj, 7. lgt-red, 8. drk-red
