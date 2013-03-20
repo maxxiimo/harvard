@@ -38,7 +38,7 @@ body:after
   top: 0
   left: 0
   width: 100%
-  height: 2em
+  height: 2.4em
   background-color: $bg-header
   opacity: .75
   z-index: -1000
@@ -53,26 +53,15 @@ img
 // navigation in _navigation.sass
 
 header
-  height: 2em
-
-.header-bg
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 2em
-  background-color: $bg-header
-  opacity: .75
-  z-index: -1000
-  +hidden
+  height: 2.4em
 
 .logo
   float: left
   margin: 0
   font-family: $leckerli
-  font-size: 1.5em
+  font-size: 1.7em
   a
-    +link-colors($blackish, $blackish, $blackish, $blackish, $blackish)
+    +link-colors($orangish, $orangish, $orangish, $orangish, $orangish)
 
 
 /*  Footer
@@ -116,7 +105,7 @@ footer
     font-family: $leckerli
     font-size: 1.3em
     text-align: center
-    color: $blackish
+    color: $orangish
 
     +at-breakpoint($break6)
       +span-columns(6 omega, 6)
