@@ -72,8 +72,6 @@ module Harvard
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.assets.initialize_on_precompile = false
-
     # Precompile *all* assets, except those that start with underscore per:
     # http://blog.55minutes.com/2012/01/getting-compass-to-work-with-rails-31-and-32/
     config.assets.precompile << /(^[^_\/]|\/[^_])[^\/]*$/
