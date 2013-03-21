@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 
-gem 'jquery-rails', '2.0.2'
+gem 'jquery-rails', '2.2.0'
 gem 'haml-rails'
 
 group :development, :test do
@@ -34,3 +34,6 @@ end
 group :production do
   gem 'pg', '0.12.2'
 end
+gem 'spree', '1.3.2'
+gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '1-3-stable'
+gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-stable'
