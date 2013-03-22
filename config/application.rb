@@ -76,6 +76,7 @@ module Harvard
     # http://blog.55minutes.com/2012/01/getting-compass-to-work-with-rails-31-and-32/
     config.assets.precompile << /(^[^_\/]|\/[^_])[^\/]*$/
 
+    # As required by Spree for deployment on Heroku.
     config.assets.initialize_on_precompile = false
   end
 end
