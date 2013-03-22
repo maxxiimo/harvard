@@ -1,0 +1,25 @@
+$leckerli:          "Leckerli One", cursive
+
+$blackish:          #3e454c
+$dark-bluish:       #2185c5
+$light-bluish:      #7ecefd
+$tanish:            #fff6e5
+$orangish:          #ff7f66
+
+$link-normal:      $orangish
+$link-visited:     $orangish
+$link-hover:       darken($orangish, 10)
+
+#logo
+  font-family: $leckerli
+  font-size: 1.5em
+  opacity: .97
+  color: $link-normal
+  &:visited
+    color: $link-visited
+  &:hover
+    color: $link-hover
+  &:focus
+    outline: thin dotted
+  &:hover, &:active
+    outline: 0
