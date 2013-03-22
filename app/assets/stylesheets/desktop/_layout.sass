@@ -61,7 +61,8 @@ header
   font-family: $leckerli
   font-size: 1.7em
   a
-    +link-colors($orangish, $orangish, $orangish, $orangish, $orangish)
+    +link-colors($orangish, darken($orangish, 10), $orangish, $orangish, $orangish)
+    opacity: .97
 
 
 /*  Footer
@@ -105,7 +106,7 @@ footer
     font-family: $leckerli
     font-size: 1.3em
     text-align: center
-    color: $orangish
+    color: darken($orangish, 8)
 
     +at-breakpoint($break6)
       +span-columns(6 omega, 6)
