@@ -5,3 +5,7 @@
 $('.blue-button').click(function(){
    document.location.href='/products';
 })
+
+$('.green-button').click(function(){
+   document.location.href='/sell';
+})
