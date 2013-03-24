@@ -1,2 +1,6 @@
 %nav{:role => "navigation"}
-  = link_to 'Login', '/login', :title => ''
+  - if spree_current_user
+    = link_to t(:my_account), spree.account_path
+    = link_to t(:logout), spree.destroy_user_session_path
+  - else
+    = link_to t(:login), spree.login_path
