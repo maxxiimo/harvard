@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130322144937) do
+ActiveRecord::Schema.define(:version => 20130414000607) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -154,6 +154,15 @@ ActiveRecord::Schema.define(:version => 20130322144937) do
   add_index "spree_inventory_units", ["shipment_id"], :name => "index_inventory_units_on_shipment_id"
   add_index "spree_inventory_units", ["variant_id"], :name => "index_inventory_units_on_variant_id"
 
+  create_table "spree_invoice_items", :force => true do |t|
+    t.integer  "spree_product_id"
+    t.integer  "quantity"
+    t.integer  "spree_supplier_invoice_id"
+    t.integer  "spree_line_item_id"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
   create_table "spree_line_items", :force => true do |t|
     t.integer  "variant_id"
     t.integer  "order_id"
@@ -283,6 +292,13 @@ ActiveRecord::Schema.define(:version => 20130322144937) do
     t.string   "identifier"
   end
 
+  create_table "spree_paypal_accounts", :force => true do |t|
+    t.string "email"
+    t.string "payer_id"
+    t.string "payer_country"
+    t.string "payer_status"
+  end
+
   create_table "spree_preferences", :force => true do |t|
     t.text     "value"
     t.string   "key"
@@ -332,6 +348,7 @@ ActiveRecord::Schema.define(:version => 20130322144937) do
     t.datetime "created_at",                              :null => false
     t.datetime "updated_at",                              :null => false
     t.boolean  "on_demand",            :default => false
+    t.integer  "spree_supplier_id"
   end
 
   add_index "spree_products", ["available_on"], :name => "index_spree_products_on_available_on"
@@ -488,6 +505,40 @@ ActiveRecord::Schema.define(:version => 20130322144937) do
     t.string  "abbr"
     t.integer "country_id"
   end
+
+  create_table "spree_supplier_invoices", :force => true do |t|
+    t.integer  "spree_order_id"
+    t.integer  "item_count"
+    t.decimal  "invoice_total"
+    t.integer  "spree_supplier_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "spree_suppliers", :force => true do |t|
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "name"
+    t.string   "title"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "email"
+    t.string   "website"
+    t.text     "notes"
+    t.boolean  "featured"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.text     "description"
+    t.integer  "spree_user_id"
+  end
+
+  create_table "spree_suppliers_taxons", :id => false, :force => true do |t|
+    t.integer "spree_supplier_id"
+    t.integer "spree_taxon_id"
+  end
+
+  add_index "spree_suppliers_taxons", ["spree_supplier_id"], :name => "index_spree_suppliers_taxons_on_spree_supplier_id"
+  add_index "spree_suppliers_taxons", ["spree_taxon_id"], :name => "index_spree_suppliers_taxons_on_spree_taxon_id"
 
   create_table "spree_tax_categories", :force => true do |t|
     t.string   "name"
